@@ -1,5 +1,4 @@
 from yowsup.layers.interface                           import YowInterfaceLayer, ProtocolEntityCallback
-from google import google
 import requests
 from utility import searchForTerm
 
