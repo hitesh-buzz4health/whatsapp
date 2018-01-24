@@ -1,6 +1,7 @@
 from yowsup.layers.interface                           import YowInterfaceLayer, ProtocolEntityCallback
 import requests
 from utility import searchForTerm
+import time
 
 class EchoLayer(YowInterfaceLayer):
 
@@ -12,7 +13,7 @@ class EchoLayer(YowInterfaceLayer):
         elif messageProtocolEntity.getType() == 'media':
             self.onMediaMessage(messageProtocolEntity)
 
-
+        time.sleep(random.randint(1,16))
         refined_results = ""    
         try:    
             refined_results = searchForTerm(messageProtocolEntity.getBody())
